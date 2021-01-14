@@ -99,7 +99,7 @@ class Model(object):
     def restore(self, sess, path):
         saver = tf.train.Saver()
         saver.restore(sess, save_path=path)
-        print('model restored from %s' % path)
+        print(('model restored from %s' % path))
 
 class Model_ASVD(Model):
     def __init__(self, user_number, item_number, cate_number, EMBEDDING_DIM, HIDDEN_SIZE, ATTENTION_SIZE):

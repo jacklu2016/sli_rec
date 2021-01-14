@@ -17,14 +17,14 @@ def test(train_file = "data/train_data", test_file = "data/test_data", save_path
         if model_type in MODEL_DICT: 
             cur_model = MODEL_DICT[model_type]
         else:
-            print "{0} is not implemented".format(model_type)
+            print( "{0} is not implemented".format(model_type))
             return
         model = cur_model(user_number, item_number, cate_number, EMBEDDING_DIM, HIDDEN_SIZE, ATTENTION_SIZE)
         model_path = save_path + model_type
         model.restore(sess, model_path)
         test_auc, test_loss, test_acc = evaluate_epoch(sess, test_data, model)
-        print "test_auc: {0}, testing loss = {1}, testing accuracy = {2}".format(
-              test_auc, test_loss, test_acc)
+        print( "test_auc: {0}, testing loss = {1}, testing accuracy = {2}".format(
+              test_auc, test_loss, test_acc))
 
 if __name__ == "__main__":
     test()

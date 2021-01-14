@@ -479,7 +479,7 @@ def attention_HAN(inputs, attention_size=None, time_major=False, return_alphas=F
 def attention_DIN(query, facts, attention_size, mask, stag='null', mode='SUM', softmax_stag=1, time_major=False, return_alphas=False):
     if isinstance(facts, tuple):
         facts = tf.concat(facts, 2)
-        print ("querry_size mismatch")
+        print( ("querry_size mismatch"))
         query = tf.concat(values = [
         query,
         query,
@@ -624,7 +624,7 @@ def shuffle(file):
 
     fd = open(file, "r")
     for l in fd:
-        print >> tf, l.strip("\n")
+        print(  tf, l.strip("\n"))
     tf.close()
 
     lines = open(tpath, 'r').readlines()
@@ -634,7 +634,7 @@ def shuffle(file):
 
     for l in lines:
         s = l.strip("\n")
-        print >> fd, s
+        print( fd, s)
 
     fd.seek(0)
     os.remove(tpath)

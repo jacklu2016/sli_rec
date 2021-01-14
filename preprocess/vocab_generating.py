@@ -6,7 +6,7 @@ if __name__=="__main__":
     item_dict = {}
     cat_dict = {}
     
-    print "vocab generating..."
+    print( "vocab generating...")
     for line in f_train:
         arr = line.strip("\n").split("\t")
         clk = arr[0]
