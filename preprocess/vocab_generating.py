@@ -1,4 +1,4 @@
-import cPickle
+import pandas as pd
 
 if __name__=="__main__":
     f_train = open("data/train_data", "r")
@@ -62,6 +62,6 @@ if __name__=="__main__":
         cat_voc[key] = index
         index += 1
     
-    cPickle.dump(uid_voc, open("data/user_vocab.pkl", "w"))
-    cPickle.dump(mid_voc, open("data/item_vocab.pkl", "w"))
-    cPickle.dump(cat_voc, open("data/category_vocab.pkl", "w"))
+    pd.dump(uid_voc, open("data/user_vocab.pkl", "w"))
+    pd.dump(mid_voc, open("data/item_vocab.pkl", "w"))
+    pd.dump(cat_voc, open("data/category_vocab.pkl", "w"))
