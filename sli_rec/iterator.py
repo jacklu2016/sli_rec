@@ -40,7 +40,7 @@ class Iterator:
     def get_id_numbers(self):
         return len(self.userdict), len(self.itemdict), len(self.catedict)
 
-    def next(self):
+    def __next__(self):
         if self.end_of_data:
             self.end_of_data = False
             self.reset()
@@ -50,7 +50,7 @@ class Iterator:
         target = []
 
         if len(self.source_buffer) == 0:
-            for k_ in xrange(self.k):
+            for k_ in range(self.k):
                 ss = self.source.readline()
                 if ss == "":
                     break

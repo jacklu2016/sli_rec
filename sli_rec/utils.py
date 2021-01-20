@@ -637,7 +637,7 @@ def shuffle(file):
         print( fd, s)
 
     fd.seek(0)
-    os.remove(tpath)
+    #os.remove(tpath)
 
     return fd
 
